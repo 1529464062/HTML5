@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<canvas id="myCanvas" width="200" height="100">
+			你的浏览器不支持HTML5
+		</canvas>
+		<script type="text/javascript">
+			var c=document.getElementById("myCanvas");
+			var ctx=c.getContext("2d");
+			ctx.lineHeight=30;//设置线条的宽度
+			ctx.strokeStyle="red";//设置线条的颜色为红色
+			
+			ctx.lineCap="butt";
+			ctx.beginPath();//创建一个新路径
+			ctx.moveTo(0,0);//指定起点坐标
+			ctx.lineTo(100,50);//指定终点坐标			
+			ctx.stroke();//画出线段
+			
+			ctx.lineCap="round";
+			ctx.beginPath();//创建一个新路径
+			ctx.moveTo(10,10);//指定起点坐标
+			ctx.lineTo(110,60);//指定终点坐标
+			ctx.stroke();//画出线段
+/*			
+			ctx.beginPath();
+			//ctx.fill("123");
+			//ctx.fillRect(0,0,100,10);//画出矩形
+			ctx.rect(0,0,100,100);
+			ctx.fillStyle="red";
+			ctx.fill();						
+*/			
+			ctx.beginPath();
+			ctx.fillStyle="red";
+			ctx.arc(50,50,50,0,360*Math.PI/180,true);
+			//ctx.stroke();
+			ctx.fill();
+		</script>
+	</body>
+</html>
